@@ -81,12 +81,11 @@ WSGI_APPLICATION = 'company.wsgi.application'
 #    }
 #}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django',
-        'NAME': 'company',
-    }
+   'default' : {
+      'ENGINE' : 'djongo',
+      'NAME' : 'company_db'
+   }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
