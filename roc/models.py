@@ -11,10 +11,16 @@ class Charge(models.Model):
         return self.name
 
 class Director(models.Model):
-    din = models.CharField(max_length=30)
+    din_dpin_pan = models.CharField(max_length=30)
     name = models.CharField(max_length=100, blank=False)
     address = models.TextField(blank=True)
-
+    roc_code = models.CharField(max_length=30, blank=True)
+    roc_name = models.CharField(max_length=30, blank=True)
+    state = models.CharField(max_length=30, blank=True)
+    vaild_from = models.DateField(null=True)
+    vaild_to = models.DateField(null=True)
+    created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
     def __str__(self):
         return self.name
 
