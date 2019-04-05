@@ -26,7 +26,7 @@ def processRoc(cin):
     director_disqualified = db['roc_director_disqualifieds'].find({'cin_number': cin})
     for director in director_disqualified:
         print(director)
-
+        print('')
     #=================Company Data==================
     company = db['roc'].find_one({'cin_number': cin})
     #Extract Data
