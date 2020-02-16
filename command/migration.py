@@ -12,11 +12,11 @@ def processRoc(cin):
     cin = "U72900TG2008PTC060114"
 
     col1 = "roc_director_details"
-    col2 = "roc_director_disqualifieds" #[x]
-    col3 = "roc_defaulters_companies" #[x]
+    col2 = "roc_director_disqualifieds" 
+    col3 = "roc_defaulters_companies"
     col4 = "roc_defaulters_directors"
     col5 = "roc_defaulters_secretaries"
-    col6 = "roc" #[x]
+    col6 = "roc"
     #================Defaulters Companies===========
     defaulters_company = db['roc_defaulters_companies'].find_one({'cin_number': cin})
     company_default = 'False'
@@ -29,7 +29,6 @@ def processRoc(cin):
         print('')
     #=================Company Data==================
     company = db['roc'].find_one({'cin_number': cin})
-    #Extract Data
     cin_number = company.get('cin_number','')
     company_name = company.get('company_name','')
 
@@ -74,7 +73,6 @@ def processRoc(cin):
         designation = signatory['designation']
         appointment = signatory['appointment']
         dsc_registered = signatory['dsc_registered']
-        #break
 
 
 def getCin():

@@ -10,7 +10,6 @@ class Charge(models.Model):
     creation_date = models.DateField(null=True)
     modification_date = models.DateField(null=True)
     address = models.TextField()
-
     #Dates created and updated
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
